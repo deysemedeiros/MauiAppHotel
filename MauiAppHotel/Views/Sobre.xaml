@@ -5,7 +5,7 @@
              Title="Sobre">
     <VerticalStackLayout>
         <Label Text="Aplicativo de Exemplo - MAUI" FontSize="24" HorizontalOptions="Center" />
-        <Label Text="Desenvolvido por: Seu Nome" FontSize="18" HorizontalOptions="Center" />
+        <Label Text="Desenvolvido por: Deyse Medeiros Soares" FontSize="18" HorizontalOptions="Center" />
         <Label Text="Ano: 2025" FontSize="18" HorizontalOptions="Center" />
         <Label Text="Versão 1.0" FontSize="16" HorizontalOptions="Center" />
     </VerticalStackLayout>
