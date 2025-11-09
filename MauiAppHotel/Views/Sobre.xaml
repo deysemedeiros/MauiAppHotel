@@ -2,11 +2,76 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiAppHotel.Views.Sobre"
-             Title="Sobre">
-    <VerticalStackLayout>
-        <Label Text="Aplicativo de Exemplo - MAUI" FontSize="24" HorizontalOptions="Center" />
-        <Label Text="Desenvolvido por: Deyse Medeiros Soares" FontSize="18" HorizontalOptions="Center" />
-        <Label Text="Ano: 2025" FontSize="18" HorizontalOptions="Center" />
-        <Label Text="Versão 1.0" FontSize="16" HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="Sobre"
+             BackgroundColor="{StaticResource Gray100}">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="20">
+
+            <!-- Título -->
+            <Label Text="Aplicativo de Hotel - MAUI"
+                   FontSize="34"
+                   FontFamily="Roboto"
+                   FontAttributes="Bold"
+                   TextColor="{StaticResource Magenta}"
+                   HorizontalTextAlignment="Center"/>
+
+            <!-- Logo opcional -->
+            <Frame HasShadow="True"
+                   Padding="0"
+                   HeightRequest="150"
+                   WidthRequest="150"
+                   CornerRadius="75"
+                   HorizontalOptions="Center"
+                   BackgroundColor="White">
+                <Image Source="hotel_logo.png"
+                       Aspect="AspectFill"
+                       HeightRequest="150"
+                       WidthRequest="150"/>
+            </Frame>
+
+            <!-- Descrição -->
+            <Label Text="O Hotel App foi desenvolvido como um projeto de exemplo utilizando .NET MAUI. Ele simula o processo de reserva de hospedagem em um hotel, permitindo escolher suítes, definir o número de hóspedes e calcular o valor total da estadia."
+                   FontSize="18"
+                   TextColor="Black"
+                   LineBreakMode="WordWrap"
+                   HorizontalTextAlignment="Center"/>
+
+            <BoxView HeightRequest="1"
+                     Color="{StaticResource Magenta}"
+                     Opacity="0.3"
+                     Margin="0,10"/>
+
+            <!-- Informações do desenvolvedor -->
+            <Label Text="Desenvolvido por:"
+                   FontSize="18"
+                   TextColor="Gray"
+                   HorizontalTextAlignment="Center"/>
+
+            <Label Text="Deyse Medeiros Soares"
+                   FontSize="22"
+                   FontAttributes="Bold"
+                   TextColor="{StaticResource Magenta}"
+                   HorizontalTextAlignment="Center"/>
+
+            <Label Text="Ano: 2025"
+                   FontSize="18"
+                   TextColor="Gray"
+                   HorizontalTextAlignment="Center"/>
+
+            <Label Text="Versão 1.0"
+                   FontSize="16"
+                   TextColor="DarkGray"
+                   HorizontalTextAlignment="Center"/>
+
+            <!-- Botão de voltar (opcional se for aba) -->
+            <Button Text="Voltar"
+                    Clicked="Button_Clicked"
+                    BackgroundColor="{StaticResource Magenta}"
+                    TextColor="White"
+                    CornerRadius="25"
+                    HeightRequest="50"
+                    Margin="40,30,40,10"/>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
